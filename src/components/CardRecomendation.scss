@@ -1,0 +1,88 @@
+.card-item {
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    text-align: left;
+}
+
+.recomendation-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.recomendation-list>div {
+    width: 280px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 1px 4px 5.300000190734863px rgba(0, 0, 0, 0.16);
+}
+
+.recomendation-list img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.recomendation-list div h4,
+.recomendation-list div p {
+    margin: 10px;
+}
+
+.alamat-text {
+    font-size: 0.8rem;
+}
+
+.description-text {
+    overflow: hidden;
+    font-size: 0.8rem;
+    color: #5e5d5d;
+    text-overflow: ellipsis;
+    /* Jika deskripsi terlalu panjang, gunakan ellipsis */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* Batasi deskripsi menjadi 2 baris */
+    -webkit-box-orient: vertical;
+}
+
+.recomendation-title {
+    margin-bottom: 20px;
+}
+
+.Link {
+    text-decoration: none;
+    /* Menghilangkan garis bawah */
+    color: black;
+    /* Mengubah warna teks menjadi hitam */
+}
+
+.merchant {
+    width: 100%;
+    height: 690px;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.merchant-image {
+    width: 200px;
+    /* Ubah ukuran sesuai kebutuhan */
+    height: 200px;
+    /* Ubah ukuran sesuai kebutuhan */
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.merchant-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Untuk memastikan gambar terlihat proporsional */
+}

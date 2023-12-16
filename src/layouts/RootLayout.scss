@@ -1,0 +1,43 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(228, 228, 228, 0.473);
+}
+
+/* Gaya untuk menu navigasi dalam navbar */
+.daftar-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.daftar-menu li {
+    margin-right: 15px;
+}
+
+.daftar-menu li:last-child {
+    margin-right: 0;
+    /* Menghilangkan margin kanan pada elemen terakhir */
+}
+
+.tautan-menu {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.logo {
+    font-size: 1.9rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+.tautan-menu:hover {
+    color: #797878;
+}

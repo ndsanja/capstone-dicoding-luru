@@ -1,22 +1,46 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home, Explore, Login, MerchantDetail, MerchantList, ProductDetail, ProductList, Register, UserProfile, NotFound } from '../views'
-
+import { Routes, Route } from "react-router-dom";
+import {
+  Home,
+  Explore,
+  Login,
+  MerchantDetail,
+  MerchantList,
+  ProductDetail,
+  ProductList,
+  Register,
+  UserProfile,
+  NotFound,
+  ResetPassword,
+} from "../views";
+import RootLayout from "../layouts/RootLayout";
 
 export default function AppRoutes() {
-    return (
-        <Router>
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/auth/login' element={<Login />} />
-                <Route path='/auth/register' element={<Register />} />
-                <Route path='/explores' element={<Explore />} />
-                <Route path='/merchants' element={<MerchantList />} />
-                <Route path='/merchants/:id' element={<MerchantDetail />} />
-                <Route path='/products' element={<ProductList />} />
-                <Route path='/products/:id' element={<ProductDetail />} />
-                <Route path='/users/:id' element={<UserProfile />} />
-                <Route path='*' element={<NotFound />} />
-            </Routes>
-        </Router>
-    )
+  return (
+    <Routes>
+      <Route path="auth">
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="reset" element={<ResetPassword />} />
+      </Route>
+
+      <Route element={<RootLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="explores" element={<Explore />} />
+
+        <Route path="merchants">
+          {/* <Route index element={<MerchantList />} /> */}
+          <Route path=":id" element={<MerchantDetail />} />
+        </Route>
+
+        <Route path="products">
+          {/* <Route index element={<ProductList />} /> */}
+          <Route path=":id" element={<ProductDetail />} />
+        </Route>
+
+        <Route path="users/:id" element={<UserProfile />} />
+      </Route>
+
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
 }

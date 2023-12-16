@@ -1,0 +1,24 @@
+.discount-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.discount-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.discount-list img {
+    width: 280px;
+    height: 180px;
+    border-radius: 20px;
+    background: linear-gradient(0deg, #d9d9d9 0%, #d9d9d9 100%);
+    box-shadow: 1px 4px 5.300000190734863px rgba(0, 0, 0, 0.16);
+    margin: 20px;
+}
+
+.discount-title {
+    margin-top: 20px;
+    margin-left: 20px;
+}

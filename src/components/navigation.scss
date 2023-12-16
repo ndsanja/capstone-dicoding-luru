@@ -1,0 +1,13 @@
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    float: right;
+    margin-right: 3rem;
+}
+
+li a {
+    font-size: 1.2rem;
+    color: black;
+    opacity: 0.5;
+}

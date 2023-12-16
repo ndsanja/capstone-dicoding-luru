@@ -1,0 +1,34 @@
+[
+    {
+        "id": "1",
+        "pictureId": "https://images.unsplash.com/photo-1561626423-a51b45aef0a1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2F0ZXxlbnwwfHwwfHx8MA%3D%3D",
+        "name": "discount 50%",
+        "NameToko": "Sate Haji Sam",
+        "alamat": "Jl. Gatot Subroto No. 54",
+        "Description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+    },
+    {
+        "id": "2",
+        "pictureId": "https://images.unsplash.com/photo-1572656631137-7935297eff55?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c290b3xlbnwwfHwwfHx8MA%3D%3D",
+        "name": "discount Black Friday",
+        "NameToko": "Soto Tangkar",
+        "alamat": "Jl. Gatot Subroto No. 54",
+        "Description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+    },
+    {
+        "id": "3",
+        "pictureId": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnJpZWQlMjByaWNlfGVufDB8fDB8fHww",
+        "name": "discount akhir tahun",
+        "NameToko": "Nasi Goreng Pondok Indah",
+        "alamat": "Jl. Gatot Subroto No. 54",
+        "Description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+    },
+    {
+        "id": "4",
+        "pictureId": "https://images.unsplash.com/photo-1623341214825-9f4f963727da?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFtZW58ZW58MHx8MHx8fDA%3D",
+        "name": "discount hut luru",
+        "NameToko": "Ramen Katsu",
+        "alamat": "Jl. Gatot Subroto No. 54",
+        "Description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+    }
+]

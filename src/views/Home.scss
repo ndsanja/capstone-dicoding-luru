@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "poppins";
+}
+
+.hero {
+    position: relative;
+}
+
+.hero-image {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 690px;
+    position: relative;
+    object-fit: cover;
+}
+
+.hero input {
+    /* Lebar input */
+    width: 200px;
+    /* Pusatkan input secara horizontal */
+    margin: 0 auto;
+    /* Menambahkan ruang di atas input */
+    margin-top: 10px;
+    /* Memberikan border radius 20px */
+    border-radius: 20px;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+}
+
+.hero-text p {
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+.hero-text p {
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(88, 88, 88);
+}
+
+.hero-text input {
+    padding-left: 40px;
+}
+
+.hero-text .search-bar {
+    width: 70%;
+    height: 50px;
+    background: #DDD9DB;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+
+}
+
+.hero-text {
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    /* Set position to absolute */
+    top: 35%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Adjust for centering */
+    padding: 10px 15px;
+    box-sizing: border-box;
+    /* Include padding in width and height */
+    text-align: center;
+    /* Center text */
+}
