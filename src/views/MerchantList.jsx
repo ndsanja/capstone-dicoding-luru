@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import MerchantItem from "./MerchantItem";
 import "./MerchantList.scss";
 
@@ -6,7 +7,6 @@ export default function MerchantList({ merchants }) {
   //     console.log(merchants.length)
   //     return <p>No merchant found!</p>;
   // }
-  console.log("Merchant", merchants);
 
   return (
     <div>

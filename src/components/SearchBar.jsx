@@ -1,16 +1,16 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function SearchBar({ onSearch }) {
+export default function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
-
-  const handleKeyDown = (event) => {
-    if (event.key === "Enter") {
-      onSearch(searchTerm);
-    }
-  };
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
+  };
+
+  const handleSearch = () => {
+    navigate(`explores?s=${searchTerm}`);
   };
 
   return (
@@ -19,9 +19,9 @@ export default function SearchBar({ onSearch }) {
         className="search-bar"
         placeholder="Silahkan Cari Disini"
         value={searchTerm}
-        onKeyDown={handleKeyDown}
         onChange={handleChange}
       ></input>
+      <button onClick={handleSearch}>Cari</button>
     </>
   );
 }

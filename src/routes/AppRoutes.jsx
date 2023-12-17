@@ -4,9 +4,7 @@ import {
   Explore,
   Login,
   MerchantDetail,
-  MerchantList,
   ProductDetail,
-  ProductList,
   Register,
   UserProfile,
   NotFound,
@@ -37,7 +35,7 @@ export default function AppRoutes() {
           <Route path=":id" element={<ProductDetail />} />
         </Route>
 
-        <Route path="users/:id" element={<UserProfile />} />
+        <Route path="users" element={<UserProfile />} />
       </Route>
 
       <Route path="*" element={<NotFound />} />

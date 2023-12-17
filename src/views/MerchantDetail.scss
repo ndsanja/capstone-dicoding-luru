@@ -1,0 +1,16 @@
+.button-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+
+    .option {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+    }
+}

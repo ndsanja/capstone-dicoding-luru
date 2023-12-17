@@ -1,24 +1,24 @@
-import post from "../data/post.json";
+/* eslint-disable react/prop-types */
+import { publicUrl } from "../repository/supabase";
 import "./CardRecomendation.scss";
 import { Link } from "react-router-dom";
 
-export default function Recomendation({ searchTerm }) {
-  const filteredPosts = post.filter((rekomen) =>
-    rekomen.NameToko.toLowerCase().includes(searchTerm?.toLowerCase())
-  );
-
+export default function Recomendation({ merchants }) {
   return (
     <>
       <div className="recomendation-list">
-        {filteredPosts.map((rekomen, index) => (
-          <div key={index}>
-            <img src={rekomen.pictureId} alt={rekomen.name} />
-            <Link to={`/merchants/${rekomen.id}`}>
-              <h4 className="Link">{rekomen.NameToko}</h4>
+        {merchants?.map((merchants) => (
+          <div key={merchants?.id}>
+            <img
+              src={`${publicUrl}/${merchants?.id}/${merchants?.picture}`}
+              alt={merchants.name}
+            />
+            <Link to={`/merchants/${merchants.id}`}>
+              <h4 className="Link">{merchants.title}</h4>
             </Link>
 
-            <p className="alamat-text">{rekomen.alamat}</p>
-            <p className="description-text">{rekomen.Description}</p>
+            <p className="alamat-text">{merchants.address}</p>
+            <p className="description-text">{merchants.description}</p>
           </div>
         ))}
       </div>

@@ -1,0 +1,37 @@
+.profile-wrapper {
+    .top-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 200px;
+
+        img {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background: rebeccapurple;
+            overflow: hidden;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .button-options {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+
+        .option {
+            min-height: 44px;
+            min-width: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+        }
+    }
+}
