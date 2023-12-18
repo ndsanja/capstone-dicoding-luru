@@ -4,12 +4,10 @@ import AppRoutes from "./routes/AppRoutes";
 import { locationStore, sessionStore, userStore } from "./stores/stores";
 import { useEffect, useState } from "react";
 import { supabase } from "./repository/db";
-import { useNavigate } from "react-router-dom";
 import { getCurrentUser } from "./repository/supabase";
 import { useGeolocated } from "react-geolocated";
 
 function App() {
-  const navigate = useNavigate();
   const [session, setSession] = useAtom(sessionStore);
   const [user, setUser] = useAtom(userStore);
   const [location, setLocation] = useAtom(locationStore);
@@ -48,11 +46,10 @@ function App() {
     };
 
     getUser();
-  }, []);
+  }, [session?.user?.id]);
 
   return (
     <>
-      {/* <Navigation /> */}
       <AppRoutes />
     </>
   );

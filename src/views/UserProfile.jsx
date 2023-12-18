@@ -12,7 +12,7 @@ import {
   HiHeart,
   HiListBullet,
 } from "react-icons/hi2";
-import { publicUrl } from "../repository/supabase";
+import { getCurrentUser, publicUrl } from "../repository/supabase";
 import UserStoreList from "../components/User/UserStoreList";
 import { useEffect } from "react";
 
