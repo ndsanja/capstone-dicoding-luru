@@ -10,8 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-google-maps/api": "^2.19.2",
     "@supabase/supabase-js": "^2.39.0",
+    "@vis.gl/react-google-maps": "^0.4.1",
+    "geolib": "^3.3.4",
     "jotai": "^2.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

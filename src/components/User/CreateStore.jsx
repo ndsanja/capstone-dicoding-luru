@@ -9,24 +9,28 @@ import {
   userStore,
 } from "../../stores/stores";
 import { HiPhoto } from "react-icons/hi2";
-// import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
-// import { useMemo } from "react";
+import { useGeolocated } from "react-geolocated";
 
 export default function CreataStore({ setCreateMerchant }) {
   const [user, setUser] = useAtom(userStore);
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
   const [description, setDescription] = useState("");
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
+  const [open, setOpen] = useState(null);
+  const [close, setClose] = useState(null);
+  const [facebook, setFacebook] = useState("");
+  const [twitter, setTwitter] = useState("");
+  const [instagram, setInstagram] = useState("");
+  const [tiktok, setTiktok] = useState("");
+  const [youtube, setYoutube] = useState("");
+  const [phone, setPhone] = useState("");
   const [newAvatar, setNewAvatar] = useState("");
   const [newAvatarUrl, setNewAvatarUrl] = useState("");
+
   const [merchants, setMerchants] = useAtom(myMerchantsStore);
-
-  //   const [location, setLocation] = useAtom(locationStore);
-  //   const { isLoaded } = useLoadScript({
-  //     googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY,
-  //   });
-
-  //   const center = useMemo(() => ({ lat: 18.52043, lng: 73.856743 }), []);
+  const { coords } = useGeolocated();
 
   const getMyMerchants = async () => {
     const { data, error } = await supabase
@@ -40,7 +44,9 @@ export default function CreataStore({ setCreateMerchant }) {
 
   useEffect(() => {
     getMyMerchants();
-  }, [user]);
+    setLatitude(coords?.latitude);
+    setLongitude(coords?.longitude);
+  }, [user, coords]);
 
   function handleChange(e) {
     setNewAvatarUrl(URL.createObjectURL(e.target.files[0]));
@@ -78,6 +84,16 @@ export default function CreataStore({ setCreateMerchant }) {
         address,
         picture: "",
         description,
+        lat: latitude,
+        lng: longitude,
+        open,
+        close,
+        facebook,
+        instagram,
+        twitter,
+        tiktok,
+        youtube,
+        phone,
         owner: user?.id,
       })
       .select()
@@ -89,6 +105,16 @@ export default function CreataStore({ setCreateMerchant }) {
       setName("");
       setAddress("");
       setDescription("");
+      setLatitude("");
+      setLongitude("");
+      setOpen("");
+      setClose("");
+      setFacebook("");
+      setInstagram("");
+      setTwitter("");
+      setTiktok("");
+      setYoutube("");
+      setPhone("");
       setCreateMerchant(false);
     }
   };
@@ -119,6 +145,66 @@ export default function CreataStore({ setCreateMerchant }) {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
+        <input
+          type="number"
+          placeholder="Latitude"
+          value={latitude}
+          onChange={(e) => setLatitude(e.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="Longitude"
+          value={longitude}
+          onChange={(e) => setLongitude(e.target.value)}
+        />
+        <input
+          type="time"
+          placeholder="Open"
+          value={open}
+          onChange={(e) => setOpen(e.target.value)}
+        />
+        <input
+          type="time"
+          placeholder="Close"
+          value={close}
+          onChange={(e) => setClose(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Phone"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Instagram"
+          value={instagram}
+          onChange={(e) => setInstagram(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Youtube"
+          value={youtube}
+          onChange={(e) => setYoutube(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Facebook"
+          value={facebook}
+          onChange={(e) => setFacebook(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Tiktok"
+          value={tiktok}
+          onChange={(e) => setTiktok(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Twitter"
+          value={twitter}
+          onChange={(e) => setTwitter(e.target.value)}
+        />
 
         <div className="avatar">
           {newAvatar ? (
@@ -135,15 +221,6 @@ export default function CreataStore({ setCreateMerchant }) {
         </div>
         <button onClick={handleInsertMerchant}>Buat Toko</button>
       </div>
-      {/* {!isLoaded ? (
-        <h1>Loading...</h1>
-      ) : (
-        <GoogleMap
-          mapContainerClassName="map-container"
-          center={center}
-          zoom={10}
-        />
-      )} */}
     </div>
   );
 }

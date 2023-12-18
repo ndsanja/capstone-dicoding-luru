@@ -11,6 +11,7 @@ import {
   ResetPassword,
 } from "../views";
 import RootLayout from "../layouts/RootLayout";
+import Maps from "../views/Maps";
 
 export default function AppRoutes() {
   return (
@@ -20,6 +21,7 @@ export default function AppRoutes() {
         <Route path="register" element={<Register />} />
         <Route path="reset" element={<ResetPassword />} />
       </Route>
+      <Route path="maps" element={<Maps />} />
 
       <Route element={<RootLayout />}>
         <Route path="/" element={<Home />} />
